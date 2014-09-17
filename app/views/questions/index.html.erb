@@ -1,2 +1,11 @@
 Hello World
-<%= @questions.count %>
+<ul>
+  <% @questions.each do |question| %>
+    <li>
+      <p><%= question.category.name %></p>
+      <p><%= question.cotent %></p>
+      <p><%= question.difficulty %></p>
+      <p><%= question.answer %></p>
+    </li>
+  <% end %>
+</ul>
