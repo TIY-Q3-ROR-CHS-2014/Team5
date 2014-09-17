@@ -18,7 +18,18 @@ angular.module("mathGame", ['ngRoute', 'templates', 'appSvc', 'appCtrl'])
 
       })
 
-  });
+      .when("/gameover", {
+
+        templateUrl:'gameover.html',
+        controller:'mathGameCtrl'
+
+      })
+
+  })
+
+.config(["$httpProvider", function(provider) {
+    provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
+}]);
 
 angular.module("appSvc", []);
 angular.module("appCtrl", []);
