@@ -3,10 +3,12 @@ class QuestionsController < ApplicationController
   before_action :find_question, only: [:show, :edit, :update, :destroy]
 
   def index
+    @user = current_user
     @questions = Question.all
-    respond_with(@questions) do |format|
+    p @user
+    respond_with(@questions, @user) do |format|
       format.html
-      format.json { render :json => @questions.as_json }
+      format.json { render :json => {question: @questions.as_json, user: @user.as_json}  }
     end
   end
 

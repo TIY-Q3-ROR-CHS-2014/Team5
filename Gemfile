@@ -30,6 +30,8 @@ gem 'pundit'
 
 gem 'angular-rails-templates'
 
+gem 'quiet_assets', group: :development
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

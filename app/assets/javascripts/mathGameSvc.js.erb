@@ -2,18 +2,14 @@ angular.module('appSvc')
 
   .factory('mathGameSvc', function($http) {
 
-    var hello = "hello";
-
     var loadData = function() {
 
       return $http.get('./questions.json');
 
     };
 
-
     return {
 
-      hello:hello,
       loadData:loadData
 
     }
