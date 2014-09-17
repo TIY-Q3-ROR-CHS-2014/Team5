@@ -1,2 +1,8 @@
 Hello World
-<%= @categories.count %>
+<ul>
+  <% @categories.each do |category| %>
+  <li>
+    <h2><%= category.name %></h2>
+  </li>
+  <% end %>
+</ul>
