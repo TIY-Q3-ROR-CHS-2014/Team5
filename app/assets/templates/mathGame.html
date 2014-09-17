@@ -1,12 +1,13 @@
 <h1>Hello World!</h1>
 
 <p>{{hello}}</p>
+<p>Current Score: {{score}}</p>
 
-<div ng-repeat="question in questionData">
+<div class="question">
 
-  {{question.content}}
-  <form>
-  <input type="number">
+  {{currentQuestion.content}}
+  <form ng-submit="nextQuestion(answer)">
+  <input type="number" ng-model="answer">
   <input type="submit" placeholder="Submit">
   </form>
 
