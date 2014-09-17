@@ -12,6 +12,8 @@ angular.module('appCtrl')
       $scope.questions = $scope.data.question
       $scope.user = $scope.data.user
 
+      console.log($scope.user)
+
       $scope.currentQuestion = $scope.questions[$scope.index];
 
       $scope.nextQuestion = function(answer) {
@@ -19,28 +21,27 @@ angular.module('appCtrl')
         if (answer === $scope.currentQuestion.answer) {
 
           $scope.score += 1;
-          $scope.index += 1;
-
-          if ($scope.index === ($scope.questions.length - 1)) {
-
-            $location.path('/');
-
-          }
-
-          $scope.currentQuestion = $scope.questions[$scope.index];
-          $scope.answer = {};
 
         } else if (answer !== $scope.currentQuestion.answer) {
 
           console.log("WRONG ANSWER");
 
-          if ($scope.index === ($scope.questions.length - 1)) {
+        }
 
-            $location.path('/');
+        $scope.index += 1;
 
-          }
+        if ($scope.index === ($scope.questions.length - 1)) {
 
-          $scope.index += 1;
+            $scope.user.total_score += $scope.score
+            if ($scope.user.high_score < $scope.score) {
+              $scope.user.high_score = $scope.score
+            }
+            
+            mathGameSvc.updateScore($scope.user);
+
+            $location.path('/gameover');
+
+        } else {
           $scope.currentQuestion = $scope.questions[$scope.index];
           $scope.answer = {};
 
