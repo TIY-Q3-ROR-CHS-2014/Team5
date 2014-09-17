@@ -1,8 +1,13 @@
 class QuestionsController < ApplicationController
+  respond_to :json
   before_action :find_question, only: [:show, :edit, :update, :destroy]
 
   def index
     @questions = Question.all
+    respond_with(@questions) do |format|
+      format.html
+      format.json { render :json => @questions.as_json }
+    end
   end
 
   def show
