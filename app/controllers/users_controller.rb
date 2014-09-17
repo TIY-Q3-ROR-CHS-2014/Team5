@@ -6,6 +6,7 @@ class UsersController < ApplicationController
     respond_with(@users) do |format|
       format.html
       format.json { render :json => @users.as_json  }
+    end
   end
 
   def new
