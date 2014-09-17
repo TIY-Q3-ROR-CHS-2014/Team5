@@ -1,0 +1,15 @@
+angular.module('appCtrl')
+
+  .controller('mathGameCtrl', function($scope, mathGameSvc) {
+
+    $scope.hello = mathGameSvc.hello;
+
+    mathGameSvc.loadData().success(function(data) {
+
+      $scope.questionData = data;
+      
+    });
+
+
+
+  });

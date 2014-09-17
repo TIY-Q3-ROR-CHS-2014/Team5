@@ -6,12 +6,27 @@ body {
 
 	background-image: url('http://wallpaper-download.net/wallpapers/random-wallpapers-blue-pattern-background-wallpaper-32590.jpg');
 	font-family: 'Ubuntu', sans-serif;
+	margin-left: 25%;
+	margin-top: 7%;
+	color: white;
+
+	h2{
+		font-size: 67px;
+	}
 
 .input {
 	width: 803px;
 	height: 86px;
 	margin-left: 0%;
 	font-size: 45px;
+	background-color: rgba(0, 158, 255, 0.9);
+	-moz-box-shadow: 10px 10px 30px #000000;
+	-webkit-box-shadow: 10px 10px 30px #000000;
+	box-shadow: 10px 10px 30px #000000;
 	}
+
+.labeltext{
+	font-size: 22px;
+}
 
 }

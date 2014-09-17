@@ -1,14 +1,15 @@
-<body class="backgroundstyle" >
-
 <h1>Welcome#index</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
 
 
+<a href="#/game">Play Game</a>
+
 <%= link_to "Categories", categories_path %>
 <%= link_to "Questions", questions_path %>
 
-</body>
 
-<%= link_to "Categories", categories_path %>
+<ng-view>
 
- 
+
+</ng-view>
+
