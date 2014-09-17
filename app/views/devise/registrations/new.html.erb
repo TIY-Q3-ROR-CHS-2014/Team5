@@ -1,22 +1,22 @@
-<body class="backgroundstyle" >
+
 <h2>Sign up</h2>
 
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
-  <div ><%= f.label :email %><br />
+  <div ><%= f.label :email, class: "labeltext" %><br />
   <%= f.email_field :email, autofocus: true, class: "form-control input"  %></div>
 
-  <div><%= f.label :password %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
+  <div><%= f.label :password, class: "labeltext"  %> <% if @validatable %><i>(<%= @minimum_password_length %> characters minimum)</i><% end %><br />
     <%= f.password_field :password, autocomplete: "off", class: "form-control input"  %></div>
 
-  <div><%= f.label :password_confirmation %><br />
+  <div><%= f.label :password_confirmation, class: "labeltext"  %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control input"  %></div>
 
-  <div><%= f.submit "Sign up", class: "btn btn-primary" %></div>
+  <div><%= f.submit "Sign up", class: "labeltext", class: "btn btn-primary" %></div>
 <% end %>
-</body>
+
 
 
 <%= render "devise/shared/links" %>
