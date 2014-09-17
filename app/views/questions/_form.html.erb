@@ -1,0 +1,9 @@
+<%= form_for @question do |form| %>
+  <%= form.label :content %>
+  <%= form.text_field :content, autofocus: true %>
+  <%= form.label :difficulty %>
+  <%= form.number_field :difficulty %>
+  <%= form.label :answer %>
+  <%= form.number_field :answer %>
+  <%= form.submit "Submit Question" %>
+<% end %>
