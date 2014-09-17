@@ -1,14 +1,18 @@
 class UsersController < ApplicationController
-  
+  respond_to :json
+
   def index
     @users = User.all
+    respond_with(@users) do |format|
+      format.html
+      format.json { render :json => @users.as_json  }
   end
 
-  def new 
+  def new
     @user = User.new
   end
 
-  def create 
+  def create
      @user = User.create params[:id]
   end
 
