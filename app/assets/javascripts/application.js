@@ -16,6 +16,7 @@
 //= require angular-route
 //= require angular-rails-templates
 //= require_tree ../templates
-//= require bootstrap.min.js
 //= require bootstrap.min
+//= require bootstrap.min
+//= require mathGameApp
 //= require_tree .
