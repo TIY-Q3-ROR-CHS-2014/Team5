@@ -27,15 +27,16 @@ class UsersController < ApplicationController
     redirect_to users_path, :notice => "User updated!"
   else
     redirect_to users_path, :alert => "Please update user information correctly."
+  end
 
   def destroy
     @user = User.find params[:id]
     user.delete
+  end
 
 private
-
   def user_params
     params.require(:user).permit()
   end
-
+end
 end
