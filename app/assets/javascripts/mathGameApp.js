@@ -4,6 +4,13 @@ angular.module("mathGame", ['ngRoute', 'templates', 'appSvc', 'appCtrl'])
 
     $routeProvider
 
+      .when("/", {
+
+        templateUrl:'leaderboard.html',
+        controller:'leaderboardCtrl'
+
+      })
+
       .when("/game", {
 
         templateUrl:'mathGame.html',
