@@ -2,7 +2,16 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.backgroundstyle {
+body {
+
 	background-image: url('http://wallpaper-download.net/wallpapers/random-wallpapers-blue-pattern-background-wallpaper-32590.jpg');
 	font-family: 'Ubuntu', sans-serif;
+
+.input {
+	width: 803px;
+	height: 86px;
+	margin-left: 0%;
+	font-size: 45px;
+	}
+
 }
