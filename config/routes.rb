@@ -9,8 +9,11 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   resources :categories
-
+  resources :questions
+  
   resources :users
+
+  
 
 
 
