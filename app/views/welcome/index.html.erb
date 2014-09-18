@@ -7,8 +7,16 @@
 
 <%- else %>
 
+  <div id="large" class="jumbotron input">
+    <h1>Play Iron Quiz!</h1>
+    <p>Answer simple math questions and track your score.</p>
+    <p>
+      <!-- <a href="#" class="btn btn-primary btn-lg" role="button">Learn more »</a> -->
+      <%= link_to "Sign Up »", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+    </p>
+  </div>
 	<div>
-		<%= link_to "SIGN UP TO BEGIN TO PLAY", new_user_registration_path, class:"labeltextone" %>
+		
 	</div>
 
 <% end %>
