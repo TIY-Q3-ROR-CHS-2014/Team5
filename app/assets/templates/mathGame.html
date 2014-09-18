@@ -3,9 +3,10 @@
 <p class="labeltextone">{{hello}}</p>
 <p class="labeltextone">Current Score: {{score}}</p>
 
-<div class="question">
-
+<div class="question ">
+<span class="questiontext">
   {{currentQuestion.content}}
+ </span>
   <form ng-submit="nextQuestion(answer)">
   <input type="number" ng-model="answer" class="input">
   <input type="submit" placeholder="Submit" class="buttonsize">
