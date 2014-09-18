@@ -27,9 +27,10 @@ angular.module("mathGame", ['ngRoute', 'templates', 'appSvc', 'appCtrl'])
 
   })
 
-.config(["$httpProvider", function(provider) {
-    provider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
+.config(["$httpProvider", function($httpProvider) {
+    $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content')
 }]);
+
 
 angular.module("appSvc", []);
 angular.module("appCtrl", []);
