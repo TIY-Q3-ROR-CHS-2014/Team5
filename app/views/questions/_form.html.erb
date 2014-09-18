@@ -1,11 +1,19 @@
 <%= form_for @question do |form| %>
-  <%= form.label :category_id %>
-  <%= form.select :category_id, options_for_select( @categories.collect {|category| [category.name, category.id]}) %>
-  <%= form.label :content %>
-  <%= form.text_field :content, autofocus: true %>
-  <%= form.label :difficulty %>
-  <%= form.number_field :difficulty %>
-  <%= form.label :answer %>
-  <%= form.number_field :answer %>
-  <%= form.submit "Submit Question" %>
+  <div>
+    <%= form.label :category_id, class: "control-label labeltext" %>
+    <%= form.select :category_id, options_for_select( @categories.collect {|category| [category.name, category.id]}), class: "form-control input" %>
+  </div>
+  <div>
+    <%= form.label :content, class: "control-label labeltext" %>
+    <%= form.text_field :content, autofocus: true, class: "form-control input" %>
+  </div>
+  <div>
+    <%= form.label :difficulty, class: "control-label labeltext" %>
+    <%= form.number_field :difficulty, class: "form-control input" %>
+  </div>
+  <div>
+    <%= form.label :answer, class: "control-label labeltext" %>
+    <%= form.number_field :answer, class: "form-control input" %>
+  </div>
+  <%= form.submit "Submit Question", class: "submitbutton labeltext" %>
 <% end %>
