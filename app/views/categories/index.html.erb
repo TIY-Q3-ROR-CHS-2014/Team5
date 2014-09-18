@@ -1,8 +1,8 @@
-Hello World
-<ul>
+<h3><a href="/categories/new">Add Category</a></h3>
+
+<div>
+  <h3><u>Current Categories</u></h3>
   <% @categories.each do |category| %>
-  <li>
-    <h2><%= category.name %></h2>
-  </li>
+    <h3 class="categoryList"><%= category.name %></h3>
   <% end %>
-</ul>
+</div>
