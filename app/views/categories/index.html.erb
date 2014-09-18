@@ -4,5 +4,6 @@
   <h3><u>Current Categories</u></h3>
   <% @categories.each do |category| %>
     <h3 class="categoryList"><%= category.name %></h3>
+    <%= link_to "Edit Category", edit_category_path(category) %>
   <% end %>
 </div>

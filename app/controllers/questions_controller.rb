@@ -18,6 +18,7 @@ class QuestionsController < ApplicationController
 
   def new
     @question = Question.new
+    @categories = Category.all
   end
 
   def create
@@ -31,7 +32,7 @@ class QuestionsController < ApplicationController
   end
 
   def edit
-
+    @categories = Category.all
   end
 
   def update
