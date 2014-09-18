@@ -36,7 +36,9 @@ transition: none;
 	transition: none;
 }
 
-
+a {
+	color: white
+}
 .navbar-right{
 position: absolute;
 margin-top: 4%;
@@ -56,7 +58,7 @@ body {
 
 .totalcontainer{
 margin-top: 2%;
-height: 110px;
+height: 235px;
 }
 
 .form-control {
@@ -141,16 +143,35 @@ height: 110px;
 
 
 	.navbar-default .navbar-brand {
-		margin-left: 52px;
+		 margin-left: 52px;
 		font-size: 25px;
 		color: white;
 		}
 
+		.navbar-brandtwo{
+			margin-left: -75%;
+			font-size: 25px;
+			color: white;
+
+		}
+
 		.links{
-			margin-left: 65%;
+			margin-left: 22%;
 			width: 102%;
 			margin-top: -2%;
+			text-align: center;
+		}
 
+		.linkstwo {
+			width: 1629px;
+			display: inline-block;
+			text-align: center;
+			margin-left: 4%;
+		}
+
+		.linksthree{
+			margin-left: 6%;
+			margin-top: 1%;
 		}
 
 		.navbar-brand:hover{
@@ -161,8 +182,8 @@ height: 110px;
 	.navbar-default {
 	 background-image: none;
 	 background-color: transparent; 
-	 border-color: transparent; 
-}	
+	 border-color: transparent;
+	}	
 
 	h2{
 		font-size: 67px;
@@ -171,6 +192,8 @@ height: 110px;
 	.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
 	color: #555; 
  	background-color: #e7e7e7; 
+ 	margin-top: 1%;
+	margin-left: 20%;
 }
 
 	.buttonsize{
@@ -184,6 +207,18 @@ height: 110px;
 		background-color: black;
 
 	}
+
+.submitbutton {
+	background-color: black;
+	border-color: transparent;
+	width: 94px;
+	height: 45px;
+	font-size: 20px;
+	-moz-box-shadow: 10px 10px 30px #000000;
+	-webkit-box-shadow: 10px 10px 30px #000000;
+	box-shadow: 10px 10px 30px #000000;
+}
+
 
 .input {
 	width: 803px;
@@ -202,16 +237,24 @@ height: 110px;
 	font-size: 22px;
 }
 
+
+.questiontext{
+	font-size: 47px;
+	margin-left: 14%;
+}
+
+.usernamebox{
+		margin-left: 39px;
+	}
+
 .labeltextone{
 	font-size: 81px;
-	font-weight: 800;
 	margin-top: 54px;
 	color: white;
 	font-family: 'Ek Mukta', sans-serif;
 	text-align: center;
 	margin: 6%;
-
-
+	margin-left: 11%;
 }
 
 }
