@@ -9,4 +9,6 @@ angular.module('appCtrl')
 
     });
 
+    $scope.predicate = "-total_score"
+
   });
