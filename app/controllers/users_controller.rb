@@ -14,7 +14,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find params[:id]
-    @roles = [ ["user", 0], ["admin", 2] ]
+    @roles = ["user", 0], ["admin", 2]
   end
 
   def edit
