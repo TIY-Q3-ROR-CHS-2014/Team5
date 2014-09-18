@@ -3,14 +3,33 @@
 <p class="labeltextone">{{hello}}</p>
 <p class="labeltextone">Current Score: {{score}}</p>
 
-<div class="question ">
-<span class="questiontext">
-  {{currentQuestion.content}}
- </span>
-  <form ng-submit="nextQuestion(answer)">
-  <input type="number" ng-model="answer" class="input">
-  <input type="submit" placeholder="Submit" class="buttonsize">
-  </form>
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-2">
+    <div class="progress">
+      <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow={{getPercentage()}} aria-valuemin="0" aria-valuemax="10" ng-style="{width :  ( getPercentage() + '%' ) }">
+      </div>
+      <div class="progress-bar progress-bar-warning" ng-style="{width :  ( getPercentWrong() + '%' ) }">
+      </div>
+    </div>
+  </div>
+</div>
 
-
+<div class="row">
+  <div class="col-lg-8 col-lg-offset-2">
+    <!-- <div class="question "> -->
+      <h2>
+        {{currentQuestion.content}}
+      </h2>
+      <form ng-submit="nextQuestion(answer)">
+        <div class="row">
+          <div class="col-xs-10">
+            <input type="number" ng-model="answer" class="input">
+          </div>
+          <div class="col-xs-2">
+            <input type="submit" placeholder="Submit" class="buttonsize">
+          </div>
+        </div>
+      </form>
+    <!-- </div> -->
+  </div>
 </div>
