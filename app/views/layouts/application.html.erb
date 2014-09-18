@@ -32,18 +32,21 @@
           </div>
           <div class="navbar-collapse collapse">
             <form class="navbar-form navbar-right" role="form">
+              <%= render 'devise/menu/registration_items' %>
               <%= render 'devise/menu/login_items' %>
           </form>
         </div><!--/.navbar-collapse -->
       </div>
     </div>
 
-  <%= render 'devise/menu/registration_items' %>
 
   <%- if notice || alert %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
   <% end %>
-  <%= yield %>
+  <div class="container">
+    <%= yield %>
+  </div>
+  
 </body>
 </html>

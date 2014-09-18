@@ -2,6 +2,7 @@ angular.module('appCtrl')
 
   .controller('mathGameCtrl', function($scope, $location, mathGameSvc) {
 
+    $scope.finalScore = mathGameSvc.finalScore
     $scope.hello = mathGameSvc.hello;
     $scope.score = 0;
     $scope.index = 0;
@@ -42,7 +43,8 @@ angular.module('appCtrl')
             if ($scope.user.high_score < $scope.score) {
               $scope.user.high_score = $scope.score
             }
-
+            
+            mathGameSvc.getFinalScore($scope.score);
             mathGameSvc.updateScore($scope.user);
 
             $location.path('/gameover');
