@@ -6,8 +6,8 @@
 <%= devise_error_messages! %>
 
   <div>
-    <%= f.label :username %>
-    <%= f.text_field :username, class: "form-control input" %>
+    <%= f.label :username, class: "labeltext" %>
+    <%= f.text_field :username, class: "form-control input usernamebox" %>
   </div>
 
   <div>
@@ -25,7 +25,7 @@
     <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control input"  %>
   </div>
 
-  <div><%= f.submit "Sign up", class: "labeltext", class: "btn btn-primary" %></div>
+  <div><%= f.submit "Sign up", class: "labeltext" , class: "submitbutton" %></div>
 
 <% end %>
 
