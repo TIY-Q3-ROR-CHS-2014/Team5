@@ -6,7 +6,6 @@ angular.module('appCtrl')
     leaderboardSvc.getUsers().success(function(data) {
 
       $scope.users = data;
-      console.log($scope.users);
 
     });
 

@@ -26,11 +26,12 @@ class UsersController < ApplicationController
   end
 
   def update
-     @user = User.find params[:id]
-  if @user.update_attributes(user_params)
-    redirect_to users_path, :notice => "User updated!"
-  else
-    redirect_to users_path, :alert => "Please update user information correctly."
+    @user = User.find params[:id]
+    if @user.update_attributes user_params
+      redirect_to users_path, :notice => "User updated!"
+    else
+      redirect_to users_path, :alert => "Please update user information correctly."
+    end
   end
 
   def destroy
@@ -42,5 +43,4 @@ private
   def user_params
     params.require(:user).permit(:username, :high_score, :total_score)
   end
-end
 end
