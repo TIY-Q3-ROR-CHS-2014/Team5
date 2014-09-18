@@ -13,18 +13,16 @@ angular.module('appCtrl')
       $scope.questions = $scope.data.question
       $scope.user = $scope.data.user
 
-      console.log($scope.user)
-
       $scope.currentQuestion = $scope.questions[$scope.index];
 
       $scope.getPercentage = function () {
         return ($scope.score * 10);
-        
+
         }
 
       $scope.getPercentWrong = function () {
         return (($scope.index - $scope.score) * 10);
-        
+
         }
 
       $scope.nextQuestion = function(answer) {
@@ -35,13 +33,11 @@ angular.module('appCtrl')
 
         } else if (answer !== $scope.currentQuestion.answer) {
 
-          console.log("WRONG ANSWER");
-
         }
 
         $scope.index += 1;
 
-        if ($scope.index === ($scope.questions.length - 1)) {
+        if ($scope.index === ($scope.questions.length)) {
 
             $scope.user.total_score += $scope.score
             if ($scope.user.high_score < $scope.score) {
@@ -54,6 +50,7 @@ angular.module('appCtrl')
             $location.path('/gameover');
 
         } else {
+
           $scope.currentQuestion = $scope.questions[$scope.index];
           $scope.answer = {};
 

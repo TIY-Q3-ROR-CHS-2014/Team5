@@ -1,3 +1,7 @@
+.leaderboardContainer {
+  padding:0 2%;
+}
+
 .leaderboardTitle {
   text-align:center;
 }
@@ -9,6 +13,17 @@
   h3 {
     padding-left:0;
   }
+
+  .totalScore:hover {
+    text-decoration:underline;
+    cursor:pointer
+  }
+
+  .highScore:hover {
+    text-decoration:underline;
+    cursor:pointer
+  }
+
 }
 
 .leaderboardUser {
