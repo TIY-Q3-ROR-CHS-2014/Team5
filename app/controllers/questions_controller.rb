@@ -4,8 +4,7 @@ class QuestionsController < ApplicationController
 
   def index
     @user = current_user
-    @questions = Question.all
-    p @user
+    @questions = Question.all.includes(:category)
     respond_with(@questions, @user) do |format|
       format.html
       format.json { render :json => {question: @questions.as_json, user: @user.as_json}  }
