@@ -1,14 +1,19 @@
 class UsersController < ApplicationController
-  
+  respond_to :json
+
   def index
     @users = User.all
+    respond_with(@users) do |format|
+      format.html
+      format.json { render :json => @users.as_json  }
+    end
   end
 
-  def new 
+  def new
     @user = User.new
   end
 
-  def create 
+  def create
      @user = User.create params[:id]
   end
 
@@ -22,11 +27,12 @@ class UsersController < ApplicationController
   end
 
   def update
-     @user = User.find params[:id]
-  if @user.update_attributes(user_params)
-    redirect_to users_path, :notice => "User updated!"
-  else
-    redirect_to users_path, :alert => "Please update user information correctly."
+    @user = User.find params[:id]
+    if @user.update_attributes user_params
+      redirect_to users_path, :notice => "User updated!"
+    else
+      redirect_to users_path, :alert => "Please update user information correctly."
+    end
   end
 
   def destroy
@@ -36,7 +42,6 @@ class UsersController < ApplicationController
 
 private
   def user_params
-    params.require(:user).permit(:username, :role)
+    params.require(:user).permit(:username, :high_score, :total_score, :role)
   end
-end
 end

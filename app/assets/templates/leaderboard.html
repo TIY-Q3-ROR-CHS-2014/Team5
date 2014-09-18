@@ -1,0 +1,8 @@
+<h2>LEADERBOARD</h2>
+<div ng-repeat="user in users | orderBy:predicate">
+
+  <p>{{user.username}}</p>
+  <p class="totalScore">Total Score: {{user.total_score}}</p>
+  <p class="highScore">High Score: {{user.high_score}}</p>
+
+</div>

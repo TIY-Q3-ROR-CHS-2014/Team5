@@ -2,31 +2,216 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
+.btn .btn-success {
+	transition: none;
+	background-image: none;
+	background-color: black;
+}
+
+
+.btn-success {
+background-image: none;
+background-color: transparent; 
+border-color: transparent; 
+transition: none;
+}
+
+
+.btn {
+	background-color: black;
+	border-radius: 0px;
+	color: white;
+	font-family:'Lato', sans-serif;
+	-moz-box-shadow: 10px 10px 30px #000000;
+	-webkit-box-shadow: 10px 10px 30px #000000;
+	box-shadow: 6px 6px 19px #000000;
+	transition: none;
+
+}
+
+.input.btn.btn-success:hover{
+	color:white;
+	background-image:none;
+	transition: none;
+}
+
+
+.navbar-right{
+position: absolute;
+margin-top: 4%;
+margin-left: 20%;
+}
+
+
 body {
 
-	background-image: url('http://wallpaper-download.net/wallpapers/random-wallpapers-blue-pattern-background-wallpaper-32590.jpg');
-	font-family: 'Ubuntu', sans-serif;
-	// margin-left: 25%;
-	// margin-top: 7%;
+	background-color: rgb(2, 65, 226);
+	font-family: 'Lato', sans-serif;
 	color: white;
+
+	.navbarbackground{
+		background-color: transparent;
+	}
+
+.totalcontainer{
+margin-top: 2%;
+height: 110px;
+}
+
+.form-control {
+  position: relative;
+  display: inline-block;
+  width: 215px;
+  padding: 10px 0 10px 15px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #377D6A;
+  background: #efefef;
+  border: 0;
+  border-radius: 1px;
+  outline: 0;
+  text-indent: 60px; // Arbitrary.
+  transition: all .3s ease-in-out;
+  
+  &::-webkit-input-placeholder {
+    color: #efefef;
+    text-indent: 0;
+    font-weight: 300;
+  }
+
+  + label {
+    display: inline-block;
+    position: absolute;
+    transform: translateX(0);
+    top: 0;
+    left: 0;
+    bottom: 0;
+    padding: 13px 15px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #032429;
+    text-align: left;
+    text-shadow: 0 1px 0 rgba(255,255,255,.4);
+    transition: all .3s ease-in-out, color .3s ease-out;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    overflow: hidden;
+    
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 100%;
+      bottom: 0;
+      width: 100%;
+      background: #7AB893;
+      z-index: -1;
+      transform: translate(0);
+      transition: all .3s ease-in-out;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+    }
+  }
+
+  
+}
+.form-control:focus,
+.form-control:active {
+  color: #377D6A;
+  text-indent: 0;
+  background: #fff;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  
+  &::-webkit-input-placeholder {
+    color: #aaa;
+  }
+  + label {
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(19,74,70,.4);
+    transform: translateX(-100%);
+    
+    &:after {
+      transform: translate(100%);
+    }
+  }
+}
+
+
+	.navbar-default .navbar-brand {
+		margin-left: 52px;
+		font-size: 25px;
+		color: white;
+		}
+
+		.links{
+			margin-left: 65%;
+			width: 102%;
+			margin-top: -2%;
+
+		}
+
+		.navbar-brand:hover{
+			color:white;
+			text-decoration: underline;
+		}
+
+	.navbar-default {
+	 background-image: none;
+	 background-color: transparent; 
+	 border-color: transparent; 
+}	
 
 	h2{
 		font-size: 67px;
 	}
 
+	.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	color: #555; 
+ 	background-color: #e7e7e7; 
+}
+
+	.buttonsize{
+		height: 86px;
+		position: absolute;
+		margin-top: -2px;
+		margin-left: 2%;
+		-moz-box-shadow: 10px 10px 30px #000000;
+		-webkit-box-shadow: 10px 10px 30px #000000;
+		box-shadow: 6px 6px 19px #000000;
+		background-color: black;
+
+	}
+
 .input {
 	width: 803px;
 	height: 86px;
-	margin-left: 0%;
+	margin-left: 13%;
 	font-size: 45px;
-	background-color: rgba(0, 158, 255, 0.9);
+	background-color: rgba(204, 204, 204, 0.9);
 	-moz-box-shadow: 10px 10px 30px #000000;
 	-webkit-box-shadow: 10px 10px 30px #000000;
 	box-shadow: 10px 10px 30px #000000;
+	color: black;
+	opacity:0.5;
 	}
 
 .labeltext{
 	font-size: 22px;
+}
+
+.labeltextone{
+	font-size: 81px;
+	font-weight: 800;
+	margin-top: 54px;
+	color: white;
+	font-family: 'Ek Mukta', sans-serif;
+	text-align: center;
+	margin: 6%;
+
+
 }
 
 }

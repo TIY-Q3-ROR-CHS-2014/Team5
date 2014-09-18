@@ -26,10 +26,16 @@ categories.each do |category|
         output = int_1.to_f / int_2.to_f
       when "*"
         output = int_1 * int_2
-      end 
-      return output      
+      end
+      return output
     end
-    
+
     questions = Question.create([{ content: "#{int_1} #{operator} #{int_2} =", difficulty: 1, answer: answer(int_1, int_2, operator), category_id: category.id }])
   end
+end
+
+
+5.times do
+  password = "#{Faker::Internet.password(8)}"
+  user = User.create([{ email: "#{Faker::Internet.email}", username: "#{Faker::Internet.user_name}", high_score: rand(0..10), total_score: rand(0..100), password: password, password_confirmation: password }])
 end
