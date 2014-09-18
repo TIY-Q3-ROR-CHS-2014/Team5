@@ -10,11 +10,9 @@ angular.module('appSvc')
 
     var updateScore = function(user) {
 
-      console.log(user);
-
       $http.put('./users/' + user.id, user);
 
-    }
+    };
 
     return {
 

@@ -2,11 +2,11 @@
 <div class="row leaderboardHead">
   <strong>
     <h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-4">Username</h3>
-    <h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-4 totalScore">Total Score</h3>
-    <h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-4 highScore">High Score</h3>
+    <h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-4 totalScore" ng-click="predicate = 'total_score'; reverse = !reverse">Total Score</h3>
+    <h3 class="col-lg-4 col-md-4 col-sm-4 col-xs-4 highScore" ng-click="predicate = 'high_score'; reverse = !reverse">High Score</h3>
   </strong>
 </div>
-<div class="row leaderboardUser" ng-repeat="user in users | orderBy:predicate">
+<div class="row leaderboardUser" ng-repeat="user in users | orderBy:predicate:reverse">
   <div ng-if="user.username != currentUser.username">
     <p class="col-lg-4 col-md-4 col-sm-4 col-xs-4 leaderboardUsername">{{user.username}}</p>
     <p class="col-lg-4 col-md-4 col-sm-4 col-xs-4 totalScore">{{user.total_score}}</p>

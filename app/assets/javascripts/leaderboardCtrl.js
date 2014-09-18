@@ -12,6 +12,6 @@ angular.module('appCtrl')
 
     });
 
-    $scope.predicate = "-total_score"
+    $scope.predicate = "-total_score";
 
   });
