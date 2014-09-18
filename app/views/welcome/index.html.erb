@@ -7,9 +7,18 @@
 <%= link_to "Add Categories", categories_path, class: "label" %>
 <%= link_to "Add Questions", questions_path %> -->
 
+<%- if user_signed_in? %>
 
-<ng-view>
+	<ng-view>
 
 
-</ng-view>
+	</ng-view>
+
+<%- else %>
+
+	<div>
+		<%= link_to "SIGN UP TO BEGIN TO PLAY", new_user_registration_path, class:"labeltextone" %>
+	</div>
+
+<% end %>
 
