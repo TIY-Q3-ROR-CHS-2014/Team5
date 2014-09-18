@@ -37,5 +37,5 @@ end
 
 5.times do
   password = "#{Faker::Internet.password(8)}"
-  user = User.create([{ email: "#{Faker::Internet.email}", username: "#{Faker::Internet.user_name}", high_score: rand(0..10), total_score: rand(0..100), password: password, password_confirmation: password }])
+  user = User.create([{ email: "#{Faker::Internet.email}", username: "#{Faker::Internet.user_name}", high_score: rand(1..10), total_score: rand(10..100), password: password, password_confirmation: password }])
 end
