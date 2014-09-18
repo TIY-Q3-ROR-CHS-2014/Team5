@@ -1,11 +1,42 @@
-<h3><a href="/questions/new">Add Questions</a></h3>
-
 <h3><u>Current Questions</u></h3>
 <div class="questionList">
-  <% @questions.each do |question| %>
-      <p><%= question.content %> <%= question.answer %></p>
-      <p>Category: <%= question.category.name %></p>
-      <p>Difficulty: <%= question.difficulty %></p>
-      <%= link_to "Edit Question", edit_question_path(question) %>
-  <% end %>
+  <div class="row">
+    <% @questions.each do |question| %>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="panel panel-info">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                Category: <%= question.category.name %>
+                <span class="pull-right">
+                  Difficulty: <%= question.difficulty %>
+                </span>
+              </h3>
+              
+            </div>
+            <div class="panel-body standard-text labeltext">
+              <%= question.content %> <%= question.answer %>
+              <span class="pull-right"><%= link_to "Edit", edit_question_path(question), class: "small" %></span>
+            </div>
+          </div>
+          
+        </div>
+    <% end %>
+    <div class="col-lg-3 col-md-4 col-sm-6">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">
+                Category:
+                <span class="pull-right">
+                  Difficulty:
+                </span>
+              </h3>
+              
+            </div>
+            <div class="panel-body standard-text text-center labeltext">
+              <a href="/questions/new">Add Question</a>
+            </div>
+          </div>
+          
+        </div>
+  </div>
 </div>

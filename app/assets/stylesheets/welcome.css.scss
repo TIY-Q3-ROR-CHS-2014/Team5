@@ -215,3 +215,16 @@ height: 110px;
 }
 
 }
+
+.standard-text {
+  color: black;
+  background-color: rgba(204, 204, 204, 0.9);
+  opacity: 0.5;
+}
+
+.panel:hover {
+  -moz-box-shadow: 10px 10px 30px #000000;
+  -webkit-box-shadow: 10px 10px 30px #000000;
+  box-shadow: 6px 6px 19px #000000;
+  transition: none;
+}
