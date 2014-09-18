@@ -19,6 +19,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find params[:id]
+    @roles = ["user", 0], ["admin", 2]
   end
 
   def edit
@@ -41,6 +42,6 @@ class UsersController < ApplicationController
 
 private
   def user_params
-    params.require(:user).permit(:username, :high_score, :total_score)
+    params.require(:user).permit(:username, :high_score, :total_score, :role)
   end
 end
