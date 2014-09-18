@@ -11,9 +11,9 @@
   <link href='http://fonts.googleapis.com/css?family=Ek+Mukta:400,800' rel='stylesheet' type='text/css'>
 
 </head>
-<body class="backgroundstyle"  ng-app="mathGame">
-<div class="navbar navbar-default navbar-static-top navbarbackground manualnav" role="navigation">
-      <div class="container totalcontainer">
+  <body>
+    <div class="navbar navbar-inverse" role="navigation">
+      <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="sr-only">Toggle navigation</span>
@@ -21,46 +21,28 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-
-          <div class="links">
-	          <div class="linksthree">
-	          <a class="navbar-brand" href="/">HOME</a>
-	          <a class="navbar-brand" href="#/game">PLAY GAME</a>
-	          </div>
-	          <div class="linkstwo">
-	          <div class="navbar-brand">
-	           <%= render 'devise/menu/registration_items' %>
-           	 </div>
-	          <a class="navbar-brand" href="/">Iron Quiz Game</a>
-	          <span class="navbar-brandtwo"> <%= render 'devise/menu/login_items' %></span>
-		          <%- if user_signed_in?%>
-		          <%- if current_user.admin?%>
-		          <%= link_to "Categories", categories_path, class: "navbar-brand" %>
-		          <%= link_to "Questions", questions_path, class: "navbar-brand"  %>
-		          <% end %>
-	          	  <% end %>
-	          </div>
-	          <div class="links">
-	          </div>
-        </div>
-        <div class="navbar-collapse collapse">
-          </ul>
-          <div class="nav navbar-form navbar-right">
-            <div class="form-group clean-slide">
-             
-            <label ></label></div>
-            
+          <a class="navbar-brand" href="#">Iron Quiz Game</a>
+            <%- if user_signed_in?%>
+            <%- if current_user.admin?%>
+              <%= link_to "Categories", categories_path, class: "navbar-brand" %>
+              <%= link_to "Questions", questions_path, class: "navbar-brand"  %>
+            <% end %>
+            <% end %>
           </div>
-        </div><!--/.nav-collapse -->
+          <div class="navbar-collapse collapse">
+            <form class="navbar-form navbar-right" role="form">
+              <%= render 'devise/menu/login_items' %>
+          </form>
+        </div><!--/.navbar-collapse -->
       </div>
     </div>
-<%- if notice || alert %>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-<% end %>
-<div class="container">
-  <%= yield %>
-</div>
 
+<%= render 'devise/menu/registration_items' %>
+
+  <%- if notice || alert %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+  <% end %>
+  <%= yield %>
 </body>
 </html>
