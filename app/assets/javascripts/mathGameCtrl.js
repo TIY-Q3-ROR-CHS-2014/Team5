@@ -16,6 +16,16 @@ angular.module('appCtrl')
 
       $scope.currentQuestion = $scope.questions[$scope.index];
 
+      $scope.getPercentage = function () {
+        return ($scope.score * 10);
+        
+        }
+
+      $scope.getPercentWrong = function () {
+        return (($scope.index - $scope.score) * 10);
+        
+        }
+
       $scope.nextQuestion = function(answer) {
 
         if (answer === $scope.currentQuestion.answer) {
