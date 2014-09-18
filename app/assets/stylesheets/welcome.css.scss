@@ -12,8 +12,8 @@
 
 .btn-success {
 background-image: none;
-background-color: transparent; 
-border-color: transparent; 
+background-color: transparent;
+border-color: transparent;
 transition: none;
 }
 
@@ -70,7 +70,7 @@ height: 235px;
   outline: 0;
   text-indent: 60px; // Arbitrary.
   transition: all .3s ease-in-out;
-  
+
   &::-webkit-input-placeholder {
     color: #efefef;
     text-indent: 0;
@@ -95,7 +95,7 @@ height: 235px;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
     overflow: hidden;
-    
+
     &:after {
       content: "";
       position: absolute;
@@ -112,7 +112,7 @@ height: 235px;
     }
   }
 
-  
+
 }
 .form-control:focus,
 .form-control:active {
@@ -121,7 +121,7 @@ height: 235px;
   background: #fff;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  
+
   &::-webkit-input-placeholder {
     color: #aaa;
   }
@@ -129,7 +129,7 @@ height: 235px;
     color: #fff;
     text-shadow: 0 1px 0 rgba(19,74,70,.4);
     transform: translateX(-100%);
-    
+
     &:after {
       transform: translate(100%);
     }
@@ -201,8 +201,8 @@ height: 235px;
 
 
 }
-/* -------------------------------- 
-Category Layout 
+/* --------------------------------
+Category Layout
 -------------------------------- */
 .update-cat-button {    -moz-box-shadow: 10px 10px 30px #000000;
     -webkit-box-shadow: 10px 10px 30px #000000;
@@ -211,6 +211,7 @@ Category Layout
     padding: .50em;}
 
 }
+
 
 .standard-text {
   color: black;
@@ -223,4 +224,14 @@ Category Layout
   -webkit-box-shadow: 10px 10px 30px #000000;
   box-shadow: 6px 6px 19px #000000;
   transition: none;
+}
+
+.question {
+	text-align:center;
+	margin:1% 0 3% 0;
+}
+
+.gameOver {
+	text-align:center;
+	padding:5% 0;
 }
