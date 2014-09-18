@@ -11,7 +11,7 @@ categories = Category.create([{ name: "Math" }])
 categories.each do |category|
   10.times do
     int_1 = rand(0..10)
-    int_2 = rand(0..10)
+    int_2 = rand(1..10)
     operator_options = ["+", "-", "/", "*"]
     operator_index = rand(0...4)
     operator = operator_options[operator_index]

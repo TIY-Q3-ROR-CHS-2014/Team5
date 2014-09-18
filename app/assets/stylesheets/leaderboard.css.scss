@@ -1,0 +1,37 @@
+.leaderboardTitle {
+  text-align:center;
+}
+
+.leaderboardHead {
+  padding:0;
+  border-bottom:1px solid white;
+
+  h3 {
+    padding-left:0;
+  }
+}
+
+.leaderboardUser {
+  padding:1% 0;
+
+  .leaderboardUsername {
+    padding-left:0;
+  }
+
+  p {
+    margin:0;
+  }
+}
+
+.totalScore, .highScore {
+  text-align:right;
+}
+
+.leaderboardUser {
+  border-bottom:1px solid white;
+
+  .currentUser {
+    color:yellow;
+    font-weight:800;
+  }
+}
