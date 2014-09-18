@@ -39,11 +39,11 @@ transition: none;
 a {
 	color: white
 }
-.navbar-right{
+/*.navbar-right{
 position: absolute;
 margin-top: 4%;
 margin-left: 20%;
-}
+}*/
 
 
 body {
@@ -141,60 +141,9 @@ height: 235px;
   }
 }
 
-
-	.navbar-default .navbar-brand {
-		 margin-left: 52px;
-		font-size: 25px;
-		color: white;
-		}
-
-		.navbar-brandtwo{
-			margin-left: -75%;
-			font-size: 25px;
-			color: white;
-
-		}
-
-		.links{
-			margin-left: 22%;
-			width: 102%;
-			margin-top: -2%;
-			text-align: center;
-		}
-
-		.linkstwo {
-			width: 1629px;
-			display: inline-block;
-			text-align: center;
-			margin-left: 4%;
-		}
-
-		.linksthree{
-			margin-left: 6%;
-			margin-top: 1%;
-		}
-
-		.navbar-brand:hover{
-			color:white;
-			text-decoration: underline;
-		}
-
-	.navbar-default {
-	 background-image: none;
-	 background-color: transparent;
-	 border-color: transparent;
-	}
-
 	h2{
 		font-size: 67px;
 	}
-
-	.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
-	color: #555;
- 	background-color: #e7e7e7;
- 	margin-top: 1%;
-	margin-left: 20%;
-}
 
 	.buttonsize {
 		height: 86px;
@@ -249,14 +198,22 @@ height: 235px;
 	}
 
 .labeltextone{
-	font-size: 81px;
-	margin-top: 54px;
+	font-size: 65px;
 	color: white;
 	font-family: 'Ek Mukta', sans-serif;
 	text-align: center;
-	margin: 6%;
-	margin-left: 11%;
+  padding-left: 80px;
+
+
 }
+/* --------------------------------
+Category Layout
+-------------------------------- */
+.update-cat-button {    -moz-box-shadow: 10px 10px 30px #000000;
+    -webkit-box-shadow: 10px 10px 30px #000000;
+    box-shadow: 6px 6px 19px #000000;
+    background-color: black;
+    padding: .50em;}
 
 }
 
