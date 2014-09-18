@@ -1,11 +1,11 @@
-Hello World
-<ul>
+<h3><a href="/questions/new">Add Questions</a></h3>
+
+<h3><u>Current Questions</u></h3>
+<div class="questionList">
   <% @questions.each do |question| %>
-    <li>
-      <p><%= question.category.name %></p>
-      <p><%= question.content %></p>
-      <p><%= question.difficulty %></p>
-      <p><%= question.answer %></p>
-    </li>
+      <p><%= question.content %> <%= question.answer %></p>
+      <p>Category: <%= question.category.name %></p>
+      <p>Difficulty: <%= question.difficulty %></p>
+      <%= link_to "Edit Question", edit_question_path(question) %>
   <% end %>
-</ul>
+</div>
