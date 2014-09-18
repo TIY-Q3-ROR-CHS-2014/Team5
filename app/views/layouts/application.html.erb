@@ -23,36 +23,33 @@
           </button>
 
           <div class="links">
-          <div class="linksthree">
-          <a class="navbar-brand" href="/">HOME</a>
-          <a class="navbar-brand" href="#/game">PLAY GAME</a>
-          </div>
-          <div class="linkstwo">
-          <%= link_to "ADMIN ADD CATEGORIES", categories_path, class: "navbar-brand" %>
-          <%= link_to "ADMIN ADD CATEGORIES", questions_path, class: "navbar-brand"  %>
-          </div>
-
-          <a class="navbar-brand" href="/">Iron Quiz Game</a>
-          <div class="links">
-          <a class="navbar-brand" href="/#/game">Play Game</a>
-          <%- if user_signed_in?%>
-          <%- if current_user.admin?%>
-          <%= link_to "Categories", categories_path, class: "navbar-brand" %>
-          <%= link_to "Questions", questions_path, class: "navbar-brand"  %>
-          </div>
-          <% end %>
-          <% end %>
-
+	          <div class="linksthree">
+	          <a class="navbar-brand" href="/">HOME</a>
+	          <a class="navbar-brand" href="#/game">PLAY GAME</a>
+	          </div>
+	          <div class="linkstwo">
+	          <div class="navbar-brand">
+	           <%= render 'devise/menu/registration_items' %>
+           	 </div>
+	          <a class="navbar-brand" href="/">Iron Quiz Game</a>
+	          <span class="navbar-brandtwo"> <%= render 'devise/menu/login_items' %></span>
+		          <%- if user_signed_in?%>
+		          <%- if current_user.admin?%>
+		          <%= link_to "Categories", categories_path, class: "navbar-brand" %>
+		          <%= link_to "Questions", questions_path, class: "navbar-brand"  %>
+		          <% end %>
+	          	  <% end %>
+	          </div>
+	          <div class="links">
+	          </div>
         </div>
         <div class="navbar-collapse collapse">
           </ul>
           <div class="nav navbar-form navbar-right">
             <div class="form-group clean-slide">
-             <%= render 'devise/menu/registration_items' %>
+             
             <label ></label></div>
-            <div class="form-group">
-              <%= render 'devise/menu/login_items' %>
-            </div>
+            
           </div>
         </div><!--/.nav-collapse -->
       </div>
