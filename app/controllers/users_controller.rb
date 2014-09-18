@@ -3,9 +3,10 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
-    respond_with(@users) do |format|
+    @user = current_user
+    respond_with(@users, @user) do |format|
       format.html
-      format.json { render :json => @users.as_json  }
+      format.json { render :json => {users: @users.as_json, currentuser: @user.as_json}  }
     end
   end
 
