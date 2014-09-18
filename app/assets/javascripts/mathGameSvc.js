@@ -13,7 +13,6 @@ angular.module('appSvc')
       $http.put('./users/' + user.id, user);
 
     };
-<<<<<<< HEAD
 
     var finalScore = 0;
 
@@ -21,10 +20,6 @@ angular.module('appSvc')
       finalScore = score;
       console.log(finalScore)
     };
-
-
-=======
->>>>>>> beef6356ecb6337cfd0879b3bb8223eeb71e8e1e
 
     return {
 
