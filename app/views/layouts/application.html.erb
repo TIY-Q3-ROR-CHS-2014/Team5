@@ -44,11 +44,12 @@
     </div>
 
 
-  <%- if notice || alert %>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-  <% end %>
+  
   <div class="container">
+    <%- if notice || alert %>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+    <% end %>
     <%= yield %>
   </div>
   
