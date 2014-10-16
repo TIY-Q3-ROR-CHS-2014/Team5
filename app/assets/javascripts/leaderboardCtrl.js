@@ -1,5 +1,5 @@
 angular.module('appCtrl')
-  .controller('leaderboardCtrl', function($scope, leaderboardSvc) {
+  .controller('leaderboardCtrl', ['$scope', 'leaderboardSvc',function($scope, leaderboardSvc) {
 
     $scope.hello = "HELLO"
 
@@ -14,4 +14,4 @@ angular.module('appCtrl')
 
     $scope.predicate = "-total_score";
 
-  });
+  }]);
