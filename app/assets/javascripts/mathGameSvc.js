@@ -1,6 +1,6 @@
 angular.module('appSvc')
 
-  .factory('mathGameSvc', function($http) {
+  .factory('mathGameSvc', ['$http', function($http) {
 
     var loadData = function() {
 
@@ -30,4 +30,4 @@ angular.module('appSvc')
 
     }
 
-  });
+  }]);
