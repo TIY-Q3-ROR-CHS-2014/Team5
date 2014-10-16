@@ -1,6 +1,6 @@
 angular.module('appCtrl')
 
-  .controller('mathGameCtrl', function($scope, $location, mathGameSvc) {
+  .controller('mathGameCtrl', ['$scope', '$location', 'mathGameSvc', function($scope, $location, mathGameSvc) {
 
     $scope.finalScore = mathGameSvc.finalScore
     $scope.hello = mathGameSvc.hello;
@@ -60,4 +60,4 @@ angular.module('appCtrl')
 
     });
 
-  })
+  }])

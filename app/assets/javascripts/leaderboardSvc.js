@@ -1,6 +1,6 @@
 angular.module('appSvc')
 
-  .factory('leaderboardSvc', function($http) {
+  .factory('leaderboardSvc', ['$http', function($http) {
 
     var getUsers = function(){
 
@@ -14,4 +14,4 @@ angular.module('appSvc')
 
     }
 
-  });
+  }]);
